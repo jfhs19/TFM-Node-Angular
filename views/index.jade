@@ -1,0 +1,33 @@
+extends layout
+
+block content
+
+  if(user)
+    .mdl-layout.mdl-js-layout
+      header.mdl-layout__header
+        .mdl-layout__header-row
+          span.mdl-layout-title TFM
+          .mdl-layout-spacer
+          nav.mdl-navigation
+            mdl-navigation #{user.name}
+            mdl-navigation
+              img(src="#{user.photo}")
+      .mdl-layout__drawer
+        span.mdl-layout-title TFM
+        nav.mdl-navigation
+          a.mdl-navigation__link(href='/logout') Salir
+    #map-container(ng-controller='mapController as vm')
+      ng-map(zoom='14', center='[42.8169, -1.6432]', default-style="false")
+        custom-marker(ng-repeat='p in vm.positions', position='{{p.latitud}}, {{p.longitud}}')
+          #decripcion(class= '{{p.estado}}') Parking {{p.nombre}} : {{p.porcentaje}}
+  else
+    #info
+        p Bienvenido a #{title}
+        p #{description}
+        a.btn.btn-block.btn-social.btn-twitter(href='auth/twitter')
+            span.fa.fa-twitter
+            |  Login con Twitter
+        a.btn.btn-block.btn-social.btn-facebook(href='auth/facebook')
+            span.fa.fa-facebook
+            |  Login con Facebook
+

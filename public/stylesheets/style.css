@@ -1,0 +1,75 @@
+html,body,#map { height: 100%; }
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: transparent  !important;
+}
+a {
+  color: #00B7FF;
+}
+html{
+   background-image: url(./images/background.jpg) ;
+}
+.mdl-layout__container{
+  position: fixed;
+}
+#info{
+    background: #CEE3F6;
+    margin: 20% 15% 50% 15%;
+    border-color: white;
+    border-style: outset;
+    border-radius: 10px !important;
+    border-spacing: 5px;
+    text-align: center;
+    padding: 10px;
+
+}
+#app{
+   background: blue;
+}
+.angular-google-map-container {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.header{
+  width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+	position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+}
+
+ng-map {display:relative; width:100%; height:100%}
+div#map-container {width: 100%; height: 100%; position: relative; color: rgb(86, 86, 86); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; }
+div#map-container div.custom-control { z-index: 1; direction: ltr; overflow: hidden; text-align: center; padding: 1px 6px; border-bottom-right-radius: 2px; border-top-right-radius: 2px; -webkit-background-clip: padding-box; border-width: 1px 1px 1px 0px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-top-color: rgba(0, 0, 0, 0.14902); border-right-color: rgba(0, 0, 0, 0.14902); border-bottom-color: rgba(0, 0, 0, 0.14902); -webkit-box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; min-width: 41px; background-color: rgb(255, 255, 255); background-clip: padding-box; }
+
+/*  MARCAS */
+.custom-marker.medio {
+  font-size: 1em;
+  padding: 10px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: #7F7F7F solid 1px;
+  background: yellow;
+}
+.custom-marker.bajo {
+  font-size: 1em;
+  padding: 10px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+ border: #7F7F7F solid 1px;
+ background: aquamarine ;
+
+}
+.custom-marker.alto {
+  font-size: 1em;
+  padding: 10px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: #7F7F7F solid 1px;
+  background: tomato;
+
+}
